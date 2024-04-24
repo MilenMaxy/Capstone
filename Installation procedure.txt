@@ -1,0 +1,49 @@
+08 - Rohita Sai Priya
+20 - Milen Maxy
+21 - Mithuna Anuraj
+26 - Rasheeda Banu
+30 - Smruti Anuragini
+31 - Sukesh U
+
+
+-- test_app.py is the main .py file. The other .py files contain functions in them that are called
+-- in the main .py file
+
+-- The app also requires the OPENAI_API_KEY. Therefore, use your own apikey. If you don't
+-- have one, go to 
+-- https://platform.openai.com/docs/overview
+-- and purchase your apikey
+
+
+
+
+1. `pip install -r requirements.txt`: Run this command to install the prerequisites for this application
+
+2. Set the apikey as an environment variable using the command
+   ` os.environ["OPENAI_API_KEY"] = "your_api_key" ` 
+   Add the command to the main .py file
+
+3. If you want to run the app locally, use the command `streamlit run test_app.py`
+
+4. If you want to deploy the app on streamlit, firstly erase the command that sets the apikey as environment variable from the code
+
+5. Streamlit doesn't allow us to use apikeys during deployment to avoid security breaches. As a result, replace the said command with
+   ` os.environ["OPENAI_API_KEY"] == st.secrets["api_key"] `
+
+6. Store all the .py and .png files in a public github repository
+
+7. Go to https://streamlit.io/cloud
+
+8. Click on `Get Started` and subsequently on `New App`
+
+9. Fill the fields correctly. Under `main file path`, mention the main .py file. In our case, it was test_app.py
+
+10. Click on advanced settings
+
+11. In the blank area provided, initialise a secret variable
+
+12. For instance, type    ` api_key = "your_api_key" `
+
+13. Note how the key name in the st.secrets dictionary and the variable name here correspond
+
+14. Deploy the app
